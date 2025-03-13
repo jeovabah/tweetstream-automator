@@ -1,5 +1,5 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -94,10 +94,15 @@
 
   body {
     @apply bg-background text-foreground font-sans antialiased;
+    letter-spacing: -0.01em;
   }
 
   h1, h2, h3, h4, h5, h6 {
     @apply font-display font-bold tracking-tight;
+  }
+
+  h1 {
+    @apply leading-[1.15];
   }
 }
 
@@ -107,7 +112,7 @@
   }
 
   .chip {
-    @apply inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-brandBlue-100 text-brandBlue-600;
+    @apply inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-brandPurple-100 text-brandPurple-600;
   }
 
   .blur-card {
@@ -115,7 +120,7 @@
   }
 
   .btn-primary {
-    @apply inline-flex items-center justify-center rounded-full bg-brandBlue hover:bg-brandBlue-600 text-white font-medium px-6 py-3 shadow-button transition-all duration-200 ease-in-out hover:translate-y-[-2px] active:translate-y-[0px];
+    @apply inline-flex items-center justify-center rounded-full bg-gradient-to-r from-brandBlue to-brandPurple hover:from-brandBlue-600 hover:to-brandPurple-600 text-white font-medium px-6 py-3 shadow-button transition-all duration-200 ease-in-out hover:translate-y-[-2px] active:translate-y-[0px];
   }
 
   .btn-secondary {
@@ -123,7 +128,28 @@
   }
 
   .nav-link {
-    @apply text-brandGray-700 hover:text-brandBlue transition-colors duration-200 px-3 py-2 rounded-md text-sm font-medium;
+    @apply text-brandGray-700 hover:text-brandPurple transition-colors duration-200 px-3 py-2 rounded-md text-sm font-medium;
+  }
+
+  .code-block {
+    @apply font-mono text-sm bg-brandGray-50 p-4 rounded-lg border border-brandGray-200;
+  }
+
+  .price-tag {
+    @apply relative inline-block;
+  }
+
+  .price-tag::after {
+    content: "";
+    @apply absolute bottom-0 left-0 w-full h-2 bg-brandPurple-100 -z-10 mt-1;
+  }
+
+  .gradient-text {
+    @apply bg-gradient-to-r from-brandBlue to-brandPurple bg-clip-text text-transparent;
+  }
+
+  .feature-grid {
+    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-16;
   }
 
   /* Custom animations */
@@ -147,3 +173,4 @@
     animation-delay: 500ms;
   }
 }
+

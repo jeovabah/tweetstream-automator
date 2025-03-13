@@ -90,6 +90,20 @@ export default {
 					800: '#374155',
 					900: '#1A202C',
 				},
+				// Adding purple accent colors
+				brandPurple: {
+					DEFAULT: '#6366F1',
+					50: '#F5F5FF',
+					100: '#EBEBFF',
+					200: '#D1D2FE',
+					300: '#A5A7FA',
+					400: '#8183F4',
+					500: '#6366F1',
+					600: '#4F52EB',
+					700: '#3033D9',
+					800: '#2527B5',
+					900: '#1C1E87',
+				},
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -97,8 +111,9 @@ export default {
 				sm: 'calc(var(--radius) - 4px)'
 			},
 			fontFamily: {
-				sans: ['Inter', 'sans-serif'],
-				display: ['SF Pro Display', 'Inter', 'sans-serif'],
+				sans: ['Poppins', 'Inter', 'sans-serif'],
+				display: ['Montserrat', 'SF Pro Display', 'Inter', 'sans-serif'],
+				mono: ['Fira Code', 'monospace'],
 			},
 			keyframes: {
 				'accordion-down': {
@@ -181,6 +196,8 @@ export default {
 				'elevated': '0 10px 40px -10px rgba(0, 0, 0, 0.1)',
 				'button': '0 2px 6px rgba(0, 128, 255, 0.25)',
 				'card': '0 20px 50px -15px rgba(0, 0, 0, 0.05)',
+				'glow': '0 0 20px rgba(99, 102, 241, 0.2)',
+				'purple-glow': '0 0 15px rgba(99, 102, 241, 0.35)',
 			},
 		}
 	},
