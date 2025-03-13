@@ -3,7 +3,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Switch } from "@/components/ui/switch";
 import { useAnimatedElement } from "@/lib/animations";
-import { Check, Sparkles, Zap, Star, Clock, Users } from "lucide-react";
+import { Check, Sparkles, Zap, Star, Clock, Users, Cpu, Trophy, Bot } from "lucide-react";
 
 const PricingPlan = ({ 
   plan, 
@@ -90,32 +90,32 @@ const PricingPlans = () => {
   
   const pricingPlans = [
     {
-      name: "Starter",
-      description: "Perfeito para testar a plataforma",
+      name: "Freemium",
+      description: "Ideal para testar a plataforma",
       priceMonthly: 0,
       priceAnnually: 0,
       icon: <Clock size={20} />,
       features: [
-        "Até 10 postagens por mês",
-        "Agendamento básico",
+        "10 postagens por mês",
+        "5 sugestões de IA gratuitas",
         "Acesso a 1 rede social",
-        "Sugestões de conteúdo básicas",
+        "Agendamento básico",
         "Suporte por email"
       ],
       cta: "Começar Grátis"
     },
     {
       name: "Pro",
-      description: "Ideal para criadores de conteúdo",
-      priceMonthly: 39,
-      priceAnnually: 29,
-      icon: <Sparkles size={20} />,
+      description: "Para criadores de conteúdo",
+      priceMonthly: 49,
+      priceAnnually: 39,
+      icon: <Bot size={20} />,
       features: [
         "Postagens ilimitadas",
-        "Agendamento avançado com IA",
-        "Analytics em tempo real",
-        "Otimização de hashtags com IA",
-        "Reutilização de conteúdo",
+        "IA para otimização de posts",
+        "Agendamento inteligente",
+        "Analytics básico",
+        "Multimídia: fotos, GIFs, vídeos",
         "Suporte prioritário"
       ],
       cta: "Começar Agora"
@@ -128,14 +128,14 @@ const PricingPlans = () => {
       icon: <Users size={20} />,
       features: [
         "Tudo do plano Pro",
-        "Equipes com múltiplos usuários",
+        "Respostas automáticas com IA",
+        "Automação de engajamento",
         "Analytics avançado com IA",
-        "Automação avançada de respostas",
-        "Integração com outras redes",
+        "Múltiplas redes sociais",
         "API completa",
         "Suporte VIP 24/7"
       ],
-      cta: "Falar com Vendas"
+      cta: "Escolher Business"
     }
   ];
 
@@ -148,13 +148,13 @@ const PricingPlans = () => {
         >
           <div className="chip mb-4 inline-flex items-center">
             <Star size={14} className="mr-1 text-brandPurple-500" />
-            <span>Preços Transparentes</span>
+            <span>Planos Acessíveis</span>
           </div>
           <h2 className="text-3xl md:text-5xl font-bold mb-6">
-            Planos <span className="gradient-text">acessíveis</span> para seu crescimento
+            Preços <span className="gradient-text">transparentes</span> para seu crescimento
           </h2>
           <p className="text-lg text-brandGray-600 mb-8">
-            Escolha o plano ideal para suas necessidades. Sem taxas escondidas. Cancele quando quiser.
+            Escolha o plano ideal para suas necessidades com preços em Reais. Sem taxas escondidas. Cancele quando quiser.
           </p>
         </div>
 
@@ -171,7 +171,7 @@ const PricingPlans = () => {
             className="data-[state=checked]:bg-gradient-to-r data-[state=checked]:from-brandBlue data-[state=checked]:to-brandPurple"
           />
           <span className={`text-sm ${isAnnual ? 'text-brandGray-900 font-medium' : 'text-brandGray-600'}`}>
-            Anual <span className="text-brandPurple-600 text-xs ml-1 font-semibold">(-25%)</span>
+            Anual <span className="text-brandPurple-600 text-xs ml-1 font-semibold">(-20%)</span>
           </span>
         </div>
 
@@ -195,13 +195,17 @@ const PricingPlans = () => {
         </div>
         
         <div className="mt-16 text-center max-w-3xl mx-auto">
-          <div className="p-6 bg-brandPurple-50 border border-brandPurple-100 rounded-2xl">
-            <h3 className="text-lg font-semibold mb-2 flex items-center justify-center gap-2">
-              <Sparkles size={18} className="text-brandPurple-500" />
-              <span>Planos empresariais personalizados</span>
-            </h3>
+          <div className="p-6 bg-gradient-to-br from-brandPurple-50 to-brandBlue-50 border border-brandPurple-100 rounded-2xl">
+            <div className="flex items-center justify-center gap-2 mb-3">
+              <div className="w-10 h-10 rounded-full bg-gradient-to-r from-brandBlue to-brandPurple flex items-center justify-center">
+                <Trophy size={20} className="text-white" />
+              </div>
+              <h3 className="text-xl font-bold">Enterprise</h3>
+            </div>
+            <p className="text-lg font-semibold mb-2">R$ 199/mês</p>
             <p className="text-brandGray-700 mb-4">
-              Precisa de recursos específicos ou maior volume de posts? Temos planos customizados para grandes empresas.
+              Tudo do Business + personalização de IA, treinamento dedicado e API aberta para integrações externas. 
+              Ideal para grandes marcas e agências.
             </p>
             <Button variant="outline" className="border-brandPurple-200 text-brandPurple-700 hover:bg-brandPurple-100">
               Fale com nosso time de vendas

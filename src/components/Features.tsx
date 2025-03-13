@@ -1,6 +1,6 @@
 
 import { useAnimatedElement } from "@/lib/animations";
-import { Clock, Recycle, LineChart, MessageSquare, Link, Zap, Sparkles, Calendar, Repeat, BarChart2, MessageCircle, Share2, Cpu } from "lucide-react";
+import { Clock, Recycle, LineChart, MessageSquare, Link, Zap, Sparkles, Calendar, Repeat, BarChart2, MessageCircle, Share2, Cpu, Check } from "lucide-react";
 
 const FeatureCard = ({ 
   icon, 

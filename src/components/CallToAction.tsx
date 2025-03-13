@@ -1,6 +1,6 @@
 
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Sparkles, Check } from "lucide-react";
+import { ArrowRight, Sparkles, Check, Zap, Calendar } from "lucide-react";
 import { useAnimatedElement } from "@/lib/animations";
 
 const CallToAction = () => {
