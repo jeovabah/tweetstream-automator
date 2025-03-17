@@ -24,7 +24,7 @@ const Hero = () => {
           >
             <div className="chip mb-6 flex items-center gap-1">
               <Sparkles size={14} className="text-brandPurple-500" />
-              <span>Inteligência artificial para suas redes sociais</span>
+              <span>Inteligência artificial para todas as suas redes sociais</span>
             </div>
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-brandGray-900 leading-tight mb-6">
               Revolucione seu <span className="gradient-text font-extrabold">engajamento social</span> com IA avançada
